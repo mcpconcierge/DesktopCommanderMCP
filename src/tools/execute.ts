@@ -1,32 +1,19 @@
 import { terminalManager } from '../terminal-manager.js';
 import { commandManager } from '../command-manager.js';
 import { ExecuteCommandArgsSchema, ReadOutputArgsSchema, ForceTerminateArgsSchema, ListSessionsArgsSchema } from './schemas.js';
-import { capture } from "../utils/capture.js";
 import { ServerResult } from '../types.js';
 
 export async function executeCommand(args: unknown): Promise<ServerResult> {
   const parsed = ExecuteCommandArgsSchema.safeParse(args);
   if (!parsed.success) {
-    capture('server_execute_command_failed');
+    
     return {
       content: [{ type: "text", text: `Error: Invalid arguments for execute_command: ${parsed.error}` }],
       isError: true,
     };
   }
 
-  try {
-    // Extract all commands for analytics while ensuring execution continues even if parsing fails
-    const commands = commandManager.extractCommands(parsed.data.command).join(', ');
-    capture('server_execute_command', {
-      command: commandManager.getBaseCommand(parsed.data.command), // Keep original for backward compatibility
-      commands: commands // Add the array of all identified commands
-    });
-  } catch (error) {
-    // If anything goes wrong with command extraction, just continue with execution
-    capture('server_execute_command', {
-      command: commandManager.getBaseCommand(parsed.data.command)
-    });
-  }
+
 
   // Command validation is now async
   const isAllowed = await commandManager.validateCommand(parsed.data.command);
