@@ -8,7 +8,7 @@
 Work with code and text, run processes, and automate tasks, going far beyond other AI editors - without API token costs.
 
 
-![Desktop Commander MCP](https://raw.githubusercontent.com/mcpconcierge/ClaudeComputerCommander/main/docs/vertical_video_mobile.mp4)
+![Desktop Commander MCP](https://github.com/mcpconcierge/DesktopCommanderMCP/blob/main/docs/vertical_video_mobile.mp4)
 
 
 ## Table of Contents
