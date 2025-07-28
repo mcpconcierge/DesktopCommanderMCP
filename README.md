@@ -1,22 +1,15 @@
 # Desktop Commander MCP
 ### Search, update, manage files and run terminal commands with AI
 
-[![npm downloads](https://img.shields.io/npm/dw/@wonderwhy-er/desktop-commander)](https://www.npmjs.com/package/@wonderwhy-er/desktop-commander)
-[![smithery badge](https://smithery.ai/badge/@wonderwhy-er/desktop-commander)](https://smithery.ai/server/@wonderwhy-er/desktop-commander)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-yellow.svg)](https://www.buymeacoffee.com/wonderwhyer)
+⚠️ This repo is forked from [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP)
 
-
-[![Discord](https://img.shields.io/badge/Join%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/kQ27sNnZr7)
-
+⭐⭐⭐ Main Difference it is without telemetry and tracking of the user activity code. Other then that its an exact copy.
 
 Work with code and text, run processes, and automate tasks, going far beyond other AI editors - without API token costs.
 
 
-![Desktop Commander MCP](https://raw.githubusercontent.com/wonderwhy-er/ClaudeComputerCommander/main/docs/vertical_video_mobile.mp4)
+![Desktop Commander MCP](https://raw.githubusercontent.com/mcpconcierge/ClaudeComputerCommander/main/docs/vertical_video_mobile.mp4)
 
-<a href="https://glama.ai/mcp/servers/zempur9oh4">
-  <img width="380" height="200" src="https://glama.ai/mcp/servers/zempur9oh4/badge" alt="Desktop Commander MCP" />
-</a>
 
 ## Table of Contents
 - [Features](#features)
@@ -69,77 +62,12 @@ Execute long-running terminal commands on your computer and manage processes thr
   - Log rotation with 10MB size limit
   - Detailed timestamps and arguments
 
-## Installation
+## Installation (⚠️⭐Only Manual⭐⚠️)
+
+> **⚠️ If you want automatic updates ⚠️** -> visit [Original Repo](https://github.com/wonderwhy-er/DesktopCommanderMCP)
+
 First, ensure you've downloaded and installed the [Claude Desktop app](https://claude.ai/download) and you have [npm installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
-> **📋 Update & Uninstall Information:** Before choosing an installation option, note that **only Options 1 and 3 have automatic updates**. Options 2, 4, and 5 require manual updates. See the sections below for update and uninstall instructions for each option.
-
-### Option 1: Install through npx ⭐ **Auto-Updates**
-Just run this in terminal:
-```
-npx @wonderwhy-er/desktop-commander@latest setup
-```
-
-For debugging mode (allows Node.js inspector connection):
-```
-npx @wonderwhy-er/desktop-commander@latest setup --debug
-```
-Restart Claude if running.
-
-**✅ Auto-Updates:** Yes - automatically updates when you restart Claude  
-**🔄 Manual Update:** Run the setup command again  
-**🗑️ Uninstall:** Run `npx @wonderwhy-er/desktop-commander@latest setup --uninstall`
-
-### Option 2: Using bash script installer (macOS) ⭐ **Auto-Updates**
-For macOS users, you can use our automated bash installer which will check your Node.js version, install it if needed, and automatically configure Desktop Commander:
-```
-curl -fsSL https://raw.githubusercontent.com/wonderwhy-er/DesktopCommanderMCP/refs/heads/main/install.sh | bash
-```
-This script handles all dependencies and configuration automatically for a seamless setup experience.
-
-**✅ Auto-Updates:** Yes - requires manual updates  
-**🔄 Manual Update:** Re-run the bash installer command above  
-**🗑️ Uninstall:** Remove the MCP server entry from your Claude config file and delete the cloned repository if it exists
-
-### Option 3: Installing via Smithery ⭐ **Auto-Updates**
-
-To install Desktop Commander for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@wonderwhy-er/desktop-commander):
-
-```bash
-npx -y @smithery/cli install @wonderwhy-er/desktop-commander --client claude
-```
-
-**✅ Auto-Updates:** Yes - automatically updates when you restart Claude  
-**🔄 Manual Update:** Re-run the Smithery install command  
-**🗑️ Uninstall:** `npx -y @smithery/cli uninstall @wonderwhy-er/desktop-commander --client claude`
-
-### Option 4: Add to claude_desktop_config manually ❌ **Manual Updates**
-Add this entry to your claude_desktop_config.json:
-
-- On Mac: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
-- On Windows: `%APPDATA%\Claude\claude_desktop_config.json`
-- On Linux: `~/.config/Claude/claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "desktop-commander": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@wonderwhy-er/desktop-commander"
-      ]
-    }
-  }
-}
-```
-Restart Claude if running.
-
-**❌ Auto-Updates:** No - uses npx but config might not update automatically  
-**🔄 Manual Update:** Usually automatic via npx, but if issues occur, update your config file or re-add the entry  
-**🗑️ Uninstall:** Remove the "desktop-commander" entry from your claude_desktop_config.json file
-
-### Option 5: Checkout locally ❌ **Manual Updates**
 1. Clone and build:
 ```bash
 git clone https://github.com/wonderwhy-er/DesktopCommanderMCP.git
@@ -158,22 +86,12 @@ The setup command will:
 **🔄 Manual Update:** `cd DesktopCommanderMCP && git pull && npm run setup`  
 **🗑️ Uninstall:** Remove the cloned directory and remove MCP server entry from Claude config
 
-## Updating & Uninstalling Desktop Commander
+## Updating Desktop Commander
 
-### Automatic Updates (Options 1 & 3 only)
-**Options 1 (npx) and 3 (Smithery)** automatically update to the latest version whenever you restart Claude. No manual intervention needed.
-
-### Manual Updates (Options 2, 4 & 5)
-- **Option 2 (bash installer):** Re-run the curl command
-- **Option 4 (manual config):** Usually automatic via npx, but re-add config entry if issues occur
-- **Option 5 (local checkout):** `cd DesktopCommanderMCP && git pull && npm run setup`
+-  `cd DesktopCommanderMCP && git pull && npm run setup`
 
 ### Uninstalling Desktop Commander
-- **Option 1:** `npx @wonderwhy-er/desktop-commander@latest setup --uninstall`
-- **Option 2:** Remove MCP server entry from Claude config and delete any cloned repositories
-- **Option 3:** `npx -y @smithery/cli uninstall @wonderwhy-er/desktop-commander --client claude`
-- **Option 4:** Remove the "desktop-commander" entry from your claude_desktop_config.json file
-- **Option 5:** Delete the cloned directory and remove MCP server entry from Claude config
+- Delete the cloned directory and remove MCP server entry from Claude config
 
 After uninstalling, restart Claude Desktop to complete the removal.
 
