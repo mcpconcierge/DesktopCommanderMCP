@@ -70,7 +70,7 @@ First, ensure you've downloaded and installed the [Claude Desktop app](https://c
 
 1. Clone and build:
 ```bash
-git clone https://github.com/wonderwhy-er/DesktopCommanderMCP.git
+git clone https://github.com/mcpconcierge/DesktopCommanderMCP.git
 cd DesktopCommanderMCP
 npm run setup
 ```
