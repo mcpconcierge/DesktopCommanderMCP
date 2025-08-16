@@ -67,9 +67,9 @@ Execute long-running terminal commands on your computer and manage processes thr
 > **⚠️ If you want automatic updates ⚠️** -> visit [Original Repo](https://github.com/wonderwhy-er/DesktopCommanderMCP)
 
 ⚠️⚠️⚠️ First, ensure you've downloaded and installed 
-    1. [Claude Desktop app](https://claude.ai/download) and 
-    2. You have [npm installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
-    3. You have [Git](https://git-scm.com/downloads) 
+  1. [Claude Desktop app](https://claude.ai/download) and 
+  2. You have [npm installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+  3. You have [Git](https://git-scm.com/downloads) 
 
 1. Clone and build:
 ```bash
